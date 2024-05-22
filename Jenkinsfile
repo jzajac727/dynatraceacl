@@ -157,5 +157,5 @@ def status = event.pushDynatraceDeploymentEvent() (
   ]
 )
     
-//  }
+  }
 }
