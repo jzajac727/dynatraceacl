@@ -157,8 +157,10 @@ pipeline {
                     customProperties : [
                       "Jenkins JOB_NAME": "${env.JOB_NAME}",
                       "Jenkins BUILD_NUMBER": "${env.BUILD_NUMBER}"
-  ]
-)
-    
+                    ]
+                  )
+                  }
+            }
+        }    
   }
-}
+  }
