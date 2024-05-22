@@ -141,13 +141,21 @@ pipeline {
 //          }
 //        }
 
-        perfSigDynatraceReports(
-          envId: 'Dynatrace Tenant', 
-          nonFunctionalFailure: 1, 
-          specFile: "monspec/e2e_perfsig.json"
-        )
-      }
-    }
+// Initialize the class with the event methods
+def event = new com.dynatrace.ace.Event()
+
+// this is called with a script step
+def status = event.pushDynatraceDeploymentEvent() (
+  tagRule: tagMatchRules,
+  deploymentName: "myDeploymentJob: ${env.JOB_NAME}",
+  deploymentVersion: "myDeploymentVersion",
+  deploymentProject: "myDeploymentProject",
+  remediationAction: "myRemediationAction",
+  customProperties : [
+      "Jenkins JOB_NAME": "${env.JOB_NAME}",
+      "Jenkins BUILD_NUMBER": "${env.BUILD_NUMBER}"
+  ]
+)
     
 //  }
 //}
