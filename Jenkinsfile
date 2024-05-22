@@ -142,7 +142,6 @@ pipeline {
 //        }
 
 // Initialize the class with the event methods
-    stages {
         stage('CUSTOM_DEPLOYMENT') {
             steps {
                 script {
@@ -164,4 +163,3 @@ pipeline {
         }    
   }
   }
-}
