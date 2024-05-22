@@ -143,7 +143,7 @@ pipeline {
 
 // Initialize the class with the event methods
     stages {
-        stage("CUSTOM_DEPLOYMENT") {
+        stage('CUSTOM_DEPLOYMENT') {
             steps {
                 script {
                   def event = new com.dynatrace.ace.Event()
