@@ -42,7 +42,7 @@ pipeline {
           sh "docker-compose up"
 
           //          sh "kubectl -n staging apply -f ${env.APP_NAME}.yml"
-        }
+//        }
       }
     }
     // DO NOT uncomment until 06_04 Lab
