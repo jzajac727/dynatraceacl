@@ -37,8 +37,8 @@ pipeline {
 //    }
     stage('Deploy to staging namespace') {
       steps {
-        checkout scm
-        container('kubectl') {
+   //     checkout scm
+   //     container('kubectl') {
           sh "docker-compose up"
 
           //          sh "kubectl -n staging apply -f ${env.APP_NAME}.yml"
