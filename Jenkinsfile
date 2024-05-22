@@ -39,7 +39,9 @@ pipeline {
       steps {
         checkout scm
         container('kubectl') {
-          sh "kubectl -n staging apply -f ${env.APP_NAME}.yml"
+          sh "docker-compose up"
+
+          //          sh "kubectl -n staging apply -f ${env.APP_NAME}.yml"
         }
       }
     }
