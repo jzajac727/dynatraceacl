@@ -19,7 +19,7 @@ pipeline {
     string(name: 'VERSION', defaultValue: '', description: 'The version of the service to deploy.', trim: true)
   }
   agent {
-    label 'kubegit'
+    label any
   }
   stages {
 //    stage('Update Deployment and Service specification') {
